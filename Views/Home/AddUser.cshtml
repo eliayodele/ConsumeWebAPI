@@ -1,0 +1,46 @@
+﻿@model ConsumeWebAPI.Models.UserEntity
+
+@{
+    ViewData["Title"] = "AddUser";
+}
+
+<h1>AddUser</h1>
+
+<h4>UserEntity</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddUser">
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-action="Username" class="form-control"/>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Emailaddress" class="control-label"></label>
+                <input asp-action="Emailaddress" class="form-control"/>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Mobilenumber" class="control-label"></label>
+                <input asp-action="Mobilenumber" class="form-control"/>
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-action="Password" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+            <input asp-action="AddUser" type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to list</a> 
+
+</div>

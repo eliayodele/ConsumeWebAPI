@@ -1,0 +1,31 @@
+﻿@model IEnumerable<UserEntity>
+@using System.Data
+
+@{
+    ViewData["Title"] = "Fetching Data fron WebAPI";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayName("Username")</th>
+       
+            <th>@Html.DisplayName("Password")</th>
+        
+            <th>@Html.DisplayName("MobileNumber")</th>
+       
+            <th>@Html.DisplayName("EmailAddress")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model)
+        {
+            <tr>
+                <td>@row.Username</td>
+                <td>@row.Password</td>
+                <td>@row.Mobilenumber</td>
+                <td>@row.Emailaddress</td>
+            </tr>
+        }
+    </tbody>
+</table>
